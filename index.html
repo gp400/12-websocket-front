@@ -37,15 +37,14 @@
             event.preventDefault();
             const message = input.value;
             sendMessage(message)
+            input.value = "";
         })
 
         socket.onopen = ( event ) => {
-            console.log(event);
             console.log('Connected');
         }
 
         socket.onclose = ( event ) => {
-            console.log(event);
             console.log('Disconnected')
         }
 
